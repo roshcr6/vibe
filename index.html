@@ -57,6 +57,11 @@
                     <i class="ph ph-laptop"></i>
                     <span>Playground</span>
                 </a>
+                <i class="ph ph-diamond nav-decorator"></i>
+                <a href="#about" class="nav-link">
+                    <i class="ph ph-info"></i>
+                    <span>About</span>
+                </a>
                 <i class="ph ph-diamond nav-decorator right"></i>
             </div>
             <div class="nav-actions">
@@ -272,6 +277,73 @@ end sus</textarea>
                 <div id="output-display" class="output-display">
                     <div class="output-placeholder">
                         Click "Run Code" to see the magic happen ✨
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2 class="section-title">About VIBE</h2>
+            <p class="section-subtitle">Where Logic Ends and Vibes Begin</p>
+            
+            <div class="about-content">
+                <div class="about-intro">
+                    <p>VIBE is a modern, feature-rich IDE and programming language that speaks Gen-Z. Built to make coding more intuitive, expressive, and fun for the next generation of developers.</p>
+                </div>
+
+                <!-- Photo Slideshow -->
+                <div class="photo-slideshow">
+                    <div class="slideshow-container">
+                        <div class="slide active">
+                            <div class="slide-placeholder">
+                                <i class="ph ph-image"></i>
+                                <p>Team Photo 1</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-placeholder">
+                                <i class="ph ph-users"></i>
+                                <p>Group Photo</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-placeholder">
+                                <i class="ph ph-presentation"></i>
+                                <p>Event Photo</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-placeholder">
+                                <i class="ph ph-code-block"></i>
+                                <p>Workshop Session</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-placeholder">
+                                <i class="ph ph-trophy"></i>
+                                <p>Achievement Day</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Arrows -->
+                    <button class="slide-btn prev" onclick="changeSlide(-1)">
+                        <i class="ph ph-caret-left"></i>
+                    </button>
+                    <button class="slide-btn next" onclick="changeSlide(1)">
+                        <i class="ph ph-caret-right"></i>
+                    </button>
+                    
+                    <!-- Dots -->
+                    <div class="slide-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
                     </div>
                 </div>
             </div>

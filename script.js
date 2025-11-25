@@ -581,5 +581,33 @@ document.querySelectorAll('.btn-primary, .btn-secondary, .run-btn').forEach(butt
     });
 });
 
+// ===== PHOTO SLIDESHOW =====
+let currentSlideIndex = 1;
+showSlide(currentSlideIndex);
+
+function changeSlide(n) {
+    showSlide(currentSlideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlide(currentSlideIndex = n);
+}
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (!slides.length) return;
+    
+    if (n > slides.length) currentSlideIndex = 1;
+    if (n < 1) currentSlideIndex = slides.length;
+    
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[currentSlideIndex - 1].classList.add('active');
+    dots[currentSlideIndex - 1].classList.add('active');
+}
+
 console.log('%c♦ VIBE - Where Logic Ends and Vibes Begin', 'color: #7C3AED; font-size: 20px; font-weight: bold;');
 console.log('%cBuilt with anime.js, Phosphor Icons, and modern aesthetics', 'color: #06B6D4; font-size: 14px;');
