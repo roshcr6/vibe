@@ -263,10 +263,36 @@ code, pre {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     flex: 1;
     justify-content: center;
+}
+
+.nav-decorator {
+    color: var(--secondary);
+    font-size: 0.5rem;
+    animation: decoratorPulse 2s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+.nav-decorator.left {
+    animation-delay: 0s;
+}
+
+.nav-decorator.right {
+    animation-delay: 0.5s;
+}
+
+@keyframes decoratorPulse {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
 }
 
 .nav-link {
@@ -274,28 +300,28 @@ code, pre {
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 8px;
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    transition: width 0.3s ease;
+.nav-link i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
 }
 
 .nav-link:hover {
     color: var(--text-primary);
+    background: rgba(124, 58, 237, 0.1);
+    transform: translateY(-2px);
 }
 
-.nav-link:hover::after {
-    width: 100%;
+.nav-link:hover i {
+    transform: scale(1.2) rotate(5deg);
 }
 
 /* Navigation Actions */
