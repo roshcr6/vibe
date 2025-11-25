@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIBE | Where Logic Ends and Vibes Begin</title>
+    <meta name="description" content="A Gen-Z programming language that speaks your language. Modern syntax, fast runtime, and built different.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons (Modern Icon Library) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <!-- Animated Blob Cursor -->
+    <div class="cursor-blob">
+        <div class="cursor-blob-inner"></div>
+        <div class="cursor-blob-outer"></div>
+    </div>
+
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M50 10 L80 30 L80 70 L50 90 L20 70 L20 30 Z" fill="url(#logoGradient)" />
+                        <circle cx="50" cy="50" r="15" fill="white" opacity="0.9"/>
+                    </svg>
+                </div>
+                <span class="logo-text">VIBE</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#syntax" class="nav-link">Syntax</a>
+                <a href="#playground" class="nav-link">Playground</a>
+                <a href="#docs" class="nav-link">Docs</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#playground" class="nav-btn-primary">
+                    <i class="ph ph-rocket-launch"></i>
+                    <span>Get Started</span>
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Where Logic Ends</span>
+                <span class="title-line">and <span class="gradient-text">Vibes</span> Begin</span>
+            </h1>
+            <p class="hero-subtitle">
+                A programming language that speaks Gen-Z<br>
+                Built different, hits different, <span class="highlight">codes different</span>
+            </p>
+            
+            <div class="hero-badges">
+                <span class="badge">
+                    <i class="ph ph-code"></i>
+                    Modern Syntax
+                </span>
+                <span class="badge">
+                    <i class="ph ph-lightning"></i>
+                    Fast Runtime
+                </span>
+                <span class="badge">
+                    <i class="ph ph-sparkle"></i>
+                    Gen-Z Friendly
+                </span>
+            </div>
+
+            <!-- Code Morphing Animation -->
+            <div class="code-morph">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="window-title">vibe.vibe</div>
+                    </div>
+                    <div class="code-content">
+                        <pre id="morphing-code"></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Vibes</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Cap</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">∞</div>
+                    <div class="stat-label">Rizz</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Syntax Showcase -->
+    <section id="syntax" class="syntax-section">
+        <h2 class="section-title">Syntax That Slaps</h2>
+        <p class="section-subtitle">Clean, readable, and expressive code</p>
+        
+        <div class="syntax-showcase">
+            <div class="syntax-card" data-keyword="variables">
+                <div class="syntax-header">
+                    <div class="syntax-icon">
+                        <i class="ph ph-variable"></i>
+                    </div>
+                    <h3>Variables</h3>
+                </div>
+                <div class="syntax-code">
+                    <pre><code><span class="keyword">braincell</span> name = <span class="string">"VIBE"</span>
+<span class="keyword">braincell</span> vibes = <span class="number">100</span>
+<span class="keyword">braincell</span> fr = <span class="boolean">yeah</span></code></pre>
+                </div>
+            </div>
+
+            <div class="syntax-card" data-keyword="output">
+                <div class="syntax-header">
+                    <div class="syntax-icon">
+                        <i class="ph ph-chat-circle-dots"></i>
+                    </div>
+                    <h3>Output</h3>
+                </div>
+                <div class="syntax-code">
+                    <pre><code><span class="keyword">spill</span> <span class="string">"Regular output"</span>
+<span class="keyword">skibidi spill</span> <span class="string">"✨ Glows ✨"</span>
+<span class="keyword">rizzmode spill</span> <span class="string">"Bold vibes"</span></code></pre>
+                </div>
+            </div>
+
+            <div class="syntax-card" data-keyword="conditionals">
+                <div class="syntax-header">
+                    <div class="syntax-icon">
+                        <i class="ph ph-git-branch"></i>
+                    </div>
+                    <h3>Conditionals</h3>
+                </div>
+                <div class="syntax-code">
+                    <pre><code><span class="keyword">sus check</span> vibes > <span class="number">50</span>
+    <span class="keyword">spill</span> <span class="string">"High vibes! 🎵"</span>
+<span class="keyword">plot twist</span>
+    <span class="keyword">spill</span> <span class="string">"Need more vibes"</span>
+<span class="keyword">end sus</span></code></pre>
+                </div>
+            </div>
+
+            <div class="syntax-card" data-keyword="loops">
+                <div class="syntax-header">
+                    <div class="syntax-icon">
+                        <i class="ph ph-repeat"></i>
+                    </div>
+                    <h3>Loops</h3>
+                </div>
+                <div class="syntax-code">
+                    <pre><code><span class="keyword">braincell</span> i = <span class="number">0</span>
+<span class="keyword">vibe until</span> i >= <span class="number">5</span>
+    <span class="keyword">spill</span> <span class="string">"Vibing: "</span> + str(i)
+    <span class="keyword">sum</span> i <span class="number">1</span>
+<span class="keyword">end vibe</span></code></pre>
+                </div>
+            </div>
+
+            <div class="syntax-card" data-keyword="operators">
+                <div class="syntax-header">
+                    <div class="syntax-icon">
+                        <i class="ph ph-math-operations"></i>
+                    </div>
+                    <h3>Operators</h3>
+                </div>
+                <div class="syntax-code">
+                    <pre><code><span class="keyword">sum</span> vibes <span class="number">10</span>  <span class="comment"># Add</span>
+<span class="keyword">sub</span> vibes <span class="number">5</span>   <span class="comment"># Subtract</span>
+<span class="keyword">mul</span> vibes <span class="number">2</span>   <span class="comment"># Multiply</span>
+<span class="keyword">div</span> vibes <span class="number">2</span>   <span class="comment"># Divide</span></code></pre>
+                </div>
+            </div>
+
+            <div class="syntax-card" data-keyword="special">
+                <div class="syntax-header">
+                    <div class="syntax-icon">
+                        <i class="ph ph-magic-wand"></i>
+                    </div>
+                    <h3>Easter Eggs</h3>
+                </div>
+                <div class="syntax-code">
+                    <pre><code><span class="keyword">gigachad</span>  <span class="comment"># ASCII art</span>
+<span class="keyword">ritual start</span>  <span class="comment"># Matrix mode</span>
+<span class="keyword">ritual stop</span>
+<span class="comment"># So much more... 👀</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Playground -->
+    <section id="playground" class="playground-section">
+        <h2 class="section-title">Live Playground</h2>
+        <p class="section-subtitle">Try VibeScript right in your browser</p>
+        
+        <div class="playground-container">
+            <div class="playground-editor">
+                <div class="editor-header">
+                    <span class="editor-label">
+                        <i class="ph ph-code"></i>
+                        Code
+                    </span>
+                    <div class="editor-actions">
+                        <button class="editor-btn" id="clear-btn">Clear</button>
+                        <button class="editor-btn" id="example-btn">Load Example</button>
+                    </div>
+                </div>
+                <textarea id="code-input" class="code-textarea" spellcheck="false">braincell greeting = "Hello World! 💙"
+skibidi spill greeting
+
+braincell vibes = 100
+sus check vibes > 50
+    spill "The vibes are immaculate! ✨"
+plot twist
+    spill "We need more vibes..."
+end sus</textarea>
+            </div>
+
+            <div class="playground-output">
+                <div class="output-header">
+                    <span class="output-label">
+                        <i class="ph ph-terminal"></i>
+                        Output
+                    </span>
+                    <button class="run-btn" id="run-btn">
+                        <i class="ph ph-play"></i>
+                        <span>Run Code</span>
+                    </button>
+                </div>
+                <div id="output-display" class="output-display">
+                    <div class="output-placeholder">
+                        Click "Run Code" to see the magic happen ✨
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
